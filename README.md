@@ -60,6 +60,7 @@ Operations:
 plaintext
 Copy
 Edit
+
 +----------------+
 |   LRUCache     |
 +----------------+
