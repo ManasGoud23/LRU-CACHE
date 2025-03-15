@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU Cache Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LRU Cache Visualization</h1>
+
+        <!-- 📌 LRU Cache Information -->
+        <div class="info-section">
+            <h2>🔍 What is LRU Cache?</h2>
+            <p>
+                LRU (**Least Recently Used**) Cache stores a **fixed number** of items.  
+                When full, it removes the **least recently used** item to make space for new data.  
+                This ensures **efficient memory usage and faster access**.
+            </p>
+        </div>
+
+        <!-- 📌 How This Project Works -->
+        <div class="info-section">
+            <h2>⚙️ How It Works</h2>
+            <ul>
+                <li>🔹 **Set the cache size** before using it.</li>
+                <li>🔹 Use **Put** to store key-value pairs.</li>
+                <li>🔹 Use **Get** to retrieve values (moves item to front).</li>
+                <li>🔹 If full, the **Least Recently Used** item is **removed**.</li>
+            </ul>
+        </div>
+
+        <!-- 📌 Real-World Applications -->
+        <div class="info-section">
+            <h2>🌍 Where is LRU Cache Used?</h2>
+            <p>
+                ✅ **Operating Systems** – Manages memory pages.<br>
+                ✅ **Web Browsers** – Stores frequently visited sites.<br>
+                ✅ **Databases** – Optimizes query caching.<br>
+                ✅ **Networking** – Used in Content Delivery Networks (CDNs).<br>
+            </p>
+        </div>
+
+        <!-- 📌 Cache Size Input -->
+        <div class="input-section">
+            <input type="number" id="cacheSize" placeholder="Cache Size" min="1">
+            <button onclick="initializeCache()">Initialize Cache</button>
+        </div>
+
+        <!-- 📌 Key-Value Input -->
+        <div class="input-section">
+            <input type="number" id="keyInput" placeholder="Key">
+            <input type="number" id="valueInput" placeholder="Value">
+            <button onclick="put()">Put</button>
+            <button onclick="get()">Get</button>
+        </div>
+
+        <!-- 📌 Cache Display -->
+        <div class="cache-display">
+            <h2>📊 Cache Status</h2>
+            <div id="cacheContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
